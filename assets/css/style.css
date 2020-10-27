@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background-image: url(../img/fondecranxp.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+a.fileDesk {
+    text-decoration: none;
+}
+.fileDesk {
+    width: 130px;
+    cursor: default;
+    color: white;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
+    z-index: 99999;
+}
+.fileDesk:hover {
+    background-color: rgba(29, 176, 246, 0.3);
+    color: white;
+}
+.fileDesk:active, .fileDesk:focus {
+    background-color: rgba(29, 176, 246, 0.6);
+    color: white;
+}
+nav {
+    background-color: #20333e;
+    height: 40px;
+}
+.logoWindows {
+    height: 30px;
+}
+.logoFolder {
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.logoDesk {
+    height: 50px;
+    margin: 5px 15px 0 15px;
+}
+.theOverFlow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.myButton {
+    width: 10vw;
+    height: 40px;
+    cursor: default;
+}
+a.myButton:link {
+    text-decoration: none;
+}
+.myButton:hover{
+    background-color: #374b53;
+}
+.myButton:active, .myButton:focus {
+    background-color: #4e6067;
+}
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+  .modal-backdrop.show
+  {
+      opacity:0;
+  }
+  .modal-dialog, .modal-content {
+      height: 80%;
+  }
+.close:hover {
+    background-color: red;
+    color: white;
+}
+.modal-header .close {
+    padding: 1rem 2.3rem 0.9rem 2rem;
+    margin: -1rem -1rem -1rem -5rem;
+}
+.modal-header {
+    padding: 0.5rem;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: default;
+}
+.modal-body object {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
