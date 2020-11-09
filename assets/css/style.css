@@ -1,8 +1,21 @@
 body {
     margin: 0;
     background-image: url(../img/fondecranxp.jpg);
-    background-size: 100vw 100vh;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+#startScreen {
+    display: block;
+    position: absolute;
+    z-index: 999999;
+    background-color: skyblue;
+}
+.animate__animated.animate__fadeOut {
+    --animate-duration: 2s; /* doit être la même valeur que le setTimeout pour la fonction display none (voir javascript*/
+}
+.desktop {
+    height: 100vh;
+    width: 100px;
 }
 a.fileDesk {
     text-decoration: none;
@@ -18,9 +31,10 @@ a.fileDesk {
     background-color: rgba(29, 176, 246, 0.3);
     color: white;
 }
-.fileDesk:active, .fileDesk:focus {
+.fileDesk:focus, .fileDesk:active {
     background-color: rgba(29, 176, 246, 0.6);
     color: white;
+    outline: none;
 }
 nav {
     background-color: #20333e;
@@ -46,7 +60,7 @@ nav {
     margin-bottom: 0;
 }
 .myButton {
-    width: 10vw;
+    width: 11vw;
     height: 40px;
     cursor: default;
 }
@@ -93,10 +107,14 @@ a.myButton:link {
       opacity:0;
   }
   .modal-dialog, .modal-content {
-      height: 80%;
+      height: 90%;
   }
 .close:hover {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.close:focus {
+    background-color: rgba(255, 0, 0, 0.6);
     color: white;
 }
 .modal-header .close {
@@ -117,3 +135,10 @@ a.myButton:link {
     top: 0;
     width: 100%;
 }
+.logoModal {
+    height: 25px;
+    margin: 0 10px 5px 0;
+}
+button:focus {
+    outline: none;
+  }

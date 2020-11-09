@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/js/horloge.js"></script>
     <title>CV Numérique Wilfrid Diglé</title>
 </head>
 <body>
   <!-- Au démarrage -->
-
+    <div id="startScreen">
+      <div>zdzdzdzdzdzdd</div>
+      <div>zdzdzdzdzdzdd</div>
+      <div>zdzdzdzdzdzdd</div>
+      <button id="closeScreen" type="submit">Démarrer</button>
+    </div>
   <!-- Bureau -->
-    <div class="desktop">
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-3" data-toggle="modal" data-target="#experience">
+    <div class="desktop d-flex flex-column flex-wrap pt-3">
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5" ondblclick="experience()">
         <img class="logoDesk" src="assets/img/icone-experience.png" alt="">
         <p class="theOverFlow mt-1">experiences.exe</p>
-      </a>
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-5" data-toggle="modal" data-target="#formation">
+      </div>
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5" ondblclick="formation()">
         <img class="logoDesk" src="assets/img/icone-formation.png" alt="">
         <p class="theOverFlow mt-1">formation.exe</p>
-      </a>
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-5">
+      </div>
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5">
         <img class="logoDesk" src="assets/img/icone-dossier-trans.png" alt="">
         <p class="theOverFlow mt-1">Compétences</p>
-      </a>
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-5">
+      </div>
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5">
         <img class="logoDesk" src="assets/img/icone-dossier-trans.png" alt="">
         <p class="theOverFlow mt-1">Centres d'intérêts</p>
-      </a>
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-5">
+      </div>
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5">
         <img class="logoDesk" src="assets/img/bloc-note2.png" alt="">
         <p class="theOverFlow mt-1">contact.txt</p>
-      </a>
-      <a href="#" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mt-5" data-toggle="modal" data-target="#cvpapier">
+      </div>
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5" ondblclick="cvPapier()">
         <img class="logoDesk" src="assets/img/icone-pdf.png" alt="">
         <p class="theOverFlow mt-1">cvpapier.pdf</p>
-      </a>
+      </div>
     </div>
     <!-- Barre des taches -->
     <nav class="fixed-bottom p-0 d-flex justify-content-between align-items-center">
@@ -90,7 +95,7 @@
       <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="col-12 modal-title text-center">Expériences</h5>
+            <h5 class="col-12 modal-title text-center"><img class="logoModal" src="assets/img/icone-experience.png" alt="">Expériences</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -116,7 +121,7 @@
       <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="col-12 modal-title text-center">Formation</h5>
+            <h5 class="col-12 modal-title text-center"><img class="logoModal" src="assets/img/icone-formation.png" alt="">Formation</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -139,28 +144,28 @@
     </div>
     <!-- CV Papier PDF -->
     <div class="modal" tabindex="-1" role="dialog" id="cvpapier">
-      <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="col-12 modal-title text-center">CV Wilfrid Diglé</h5>
+            <h5 class="col-12 modal-title text-center"><img class="logoModal" src="assets/img/icone-pdf.png" alt="">CV Wilfrid Diglé</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body conteneur-pdf">
-            <object data="assets/pdf/CV Wilfrid Diglé.pdf" type="application/pdf">
-              <p>Il semble que vous n’ayez pas de plugiciel PDF pour ce navigateur. Ouvrez directement le fichier <a href="[URL vers le PDF]"></a></p>
+          <div class="modal-body">
+            <object data="assets/pdf/CVWilfridDIGLE.pdf" type="application/pdf">
+              <p>Il semble que vous n’ayez pas de plugiciel PDF pour ce navigateur. Ouvrez directement le fichier en cliquant <a href="assets/pdf/CVWilfridDIGLE.pdf">ici</a></p>
             </object>
           </div>
         </div>
       </div>
     </div>
   
-    <!-- <object data="[URL vers le PDF]" type="application/pdf">
-      <p>Il semble que vous n’ayez pas de plugiciel PDF pour ce navigateur. Ouvrez directement le fichier <a href="[URL vers le PDF]">historique_des_prefets_de_1855_a_20xx.pdf</a>.</p>
-    </object> -->
 
 
+
+<!-- Lien vers mon Javascript -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
 <!-- Scripts Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
