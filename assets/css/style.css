@@ -1,12 +1,6 @@
 body {
     margin: 0;
 }
-.background {
-    background-image: url(../img/fondecranxp.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
 #startScreen {
     display: block;
     position: absolute;
@@ -52,8 +46,17 @@ body {
     --animate-duration: 2s; /* doit être la même valeur que le setTimeout pour la fonction display none (voir javascript*/
 }
 .desktop {
-    height: 95%;
+    width: 100%;
+    background-image: url(../img/fondecranxp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 40px;
+    top: 0;
+}
+.contentDesktop {
     width: 100px;
+    height: 95%;
 }
 a.fileDesk {
     text-decoration: none;
