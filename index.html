@@ -9,6 +9,14 @@
     <title>CV Numérique Wilfrid Diglé</title>
 </head>
 <body>
+
+  <!-- Balises audio -->
+  <audio src="" hidden id="playerXP"></audio>
+  <audio src="assets/music/throw.mp3" hidden id="throwPlane"></audio>
+  <audio src="assets/music/run_away.mp3" hidden id="runAway"></audio>
+  <audio src="assets/music/select.mp3" hidden id="select"></audio>
+  <audio src="assets/music/select.mp3" hidden id="select2"></audio>
+  <audio src="assets/music/wild-pokemon-battle.mp3" hidden id="wildPokemonBattle"></audio>
   <!-- Au démarrage -->
     <div id="startScreen" class="text-center">
       <div class="insideStartScreen">
@@ -18,13 +26,20 @@
           <span class="spinner-border text-primary" role="status">
           </span>
           <span id="welcomeText" class="ml-2">Bienvenue</span>
-          <p><audio src="" hidden id="player"></audio></p>
         </div>
         <button id="closeScreen">Se connecter</button>
       </div>
     </div>
+
   <!-- Bureau -->
     <div class="desktop">
+
+      <div id="battleEffect1" class=""></div>
+      <div id="battleEffect2" class=""></div>
+      <div id="battleEffect3" class=""></div>
+      <div id="battleEffect4" class=""></div>
+      <div id="battleEffect5" class=""></div>
+
       <div class="contentDesktop d-flex flex-column flex-wrap pt-3">
       <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5" ondblclick="experience()">
         <img class="logoDesk" src="assets/img/icone-experience.png" alt="">
@@ -42,13 +57,13 @@
         <img class="logoDesk" src="assets/img/icone-dossier-trans.png" alt="">
         <p class="theOverFlow mt-1">Centres d'intérêts</p>
       </div>
-      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5">
-        <img class="logoDesk" src="assets/img/bloc-note.png" alt="">
-        <p class="theOverFlow mt-1">contact.txt</p>
-      </div>
-      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-2" ondblclick="cvPapier()">
+      <div tabindex="0" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-5" ondblclick="cvPapier()">
         <img class="logoDesk" src="assets/img/icone-pdf.png" alt="">
         <p class="theOverFlow mt-1">cvpapier.pdf</p>
+      </div>
+      <div tabindex="0" id="grass" class="fileDesk d-flex flex-wrap justify-content-center ml-2 mb-2" ondblclick="contact()">
+        <img class="logoDesk" src="assets/img/grass2.png" alt="">
+        <!-- <p class="theOverFlow mt-1">contact.exe</p> -->
       </div>
       </div>
     </div>
@@ -152,6 +167,29 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- Contact -->
+    <div class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" id="contact">
+        <div id="game" class="modal-content">
+            <div id="openingUp" class="animate__animated animate__slideOutUp"></div>
+            <div id="openingDown" class="animate__animated animate__slideOutDown"></div>
+            <div id="battleScreen">
+                <img id="will" class="animate__animated animate__slideInLeft" src="assets/img/will_onfloor.png" alt="">
+                <img id="player" class="animate__animated animate__slideInRight" src="assets/img/sachaonfloor.png" alt="">
+                <img id="paperPlane" src="assets/img/paperplane.png" alt="">
+                <img id="wilfrid" class="animate__animated animate__slideInLeft" src="assets/img/WILFRID.png" alt="">
+            </div>
+            <div id="battleMenu">
+                <p class="typewriter">Un WILFRID sauvage apparaît!</p>
+                <p class="choiceText">Que voulez-vous <br><br> faire ?</p>
+                <p class="fuite">Vous prenez la fuite...</p>
+                <p class="contactText">Vous envoyez un mail à WILFRID.</p>
+                <div id="choiceMenu">
+                    <img class="arrow" id="arrowContacter" src="assets/img/arrow.png" alt=""><a class="link" id="contacter" href="mailto:wilfrid.digle@sfr.fr"><span>CONTACTER<br></span></a>
+                    <img class="arrow" id="arrowFuir" src="assets/img/arrow.png" alt=""><span id="fuir">FUIR</span>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- CV Papier PDF -->
     <div class="modal" tabindex="-1" role="dialog" id="cvpapier">
